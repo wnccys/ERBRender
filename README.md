@@ -1,2 +1,6 @@
-# erb_render
-gem that allows easily ERB template rendering and layout variable treatment;
+# erbrender
+erbrender makes the bound and rendering an given block of html.erb inside a template;
+
+## Installation
+
+## Usage
