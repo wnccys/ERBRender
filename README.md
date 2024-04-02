@@ -1,5 +1,5 @@
 # erbrender
-erbrender makes the bound and rendering an given block of html.erb inside a template;
+erbrender makes the bound and rendering of a given template inside a given layout;
 
 ## Installation
 
