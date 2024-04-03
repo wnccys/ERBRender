@@ -7,9 +7,8 @@ module ERBR
         @args = args
 
         rendered_template = ERB.new(template_file).result(binding)
-        print rendered_template
 
-        print bind_template_to_layout(layout_file) { rendered_template }
+       bind_template_to_layout(layout_file) { rendered_template }
     end
 
     def self.bind_template_to_layout(layout_file)
@@ -18,5 +17,3 @@ module ERBR
         ERB.new(layout_file).result(binding)
     end
 end
-
-ERBR::render(__dir__ + "/file2.html.erb", __dir__ + "/file1.html.erb", @pokes=["charmander", "squirtle", "bulbasaur"])
