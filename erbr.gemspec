@@ -9,4 +9,5 @@ Gem::Specification.new do |spec|
     spec.homepage    = "https://rubygems.org/gems/erbr"
     spec.licenses    = ["MIT"]
     spec.metadata    = { "source_code_uri" => "https://github.com/wnccys/erbr" }
+    spec.required_ruby_version = '>= 2.7.0'
 end
