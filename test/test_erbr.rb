@@ -1,6 +1,9 @@
 require 'minitest/autorun'
-require_relative 'lib/erbr.rb'
+require 'erbr'
 
-Class ErbrTest << Minitest::Test  
-
+Class ErbrTest < Minitest::Test  
+    def test_bind
+        assert_equal "Successfully binded.", 
+            ERBR::render("template.html.erb", "layout.html.erb", [:first => "1"])
+    end
 end

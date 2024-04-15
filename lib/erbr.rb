@@ -9,8 +9,8 @@ module ERBR
         #   >> render("template.html.erb", "layout.html.erb", args)
         #
         # Arguments: 
-        #   args => holds flexible data type to make variables available for erb placeholders;
-        #   args["name"] => "Fushiguro Toji": this way views can see @args["name"] making the value avalible for view;  
+        #   args: (Any) holds flexible data type to make variables available for erb placeholders;
+        #   args["name"] => "Fushiguro Toji": this way views can see @args["name"] making the value available for view throught @args;  
 
         def render(template_name, layout_name, *args)
             template_file = File.read(template_name)
@@ -27,10 +27,12 @@ module ERBR
             rendered_template = ERB.new(template_file).result(binding)
 
             bind_template_to_layout(layout_file) { rendered_template }
+
+            return "Successfully binded."
         end
 
-        # Bound template with layout;
-        
+        # Bounds template with layout;
+
         private
         def bind_template_to_layout(layout_file)
             yield
