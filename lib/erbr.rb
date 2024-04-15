@@ -1,7 +1,17 @@
 require 'erb'
 
+# Main gem class;
 module ERBR
     class << self
+        # Renders template;
+        #
+        # Example:
+        #   >> render("template.html.erb", "layout.html.erb", args)
+        #
+        # Arguments: 
+        #   args => holds flexible data type to make variables available for erb placeholders;
+        #   args["name"] => "Fushiguro Toji": this way views can see @args["name"] making the value avalible for view;  
+
         def render(template_name, layout_name, *args)
             template_file = File.read(template_name)
             layout_file = File.read(layout_name)
@@ -19,6 +29,9 @@ module ERBR
             bind_template_to_layout(layout_file) { rendered_template }
         end
 
+        # Bound template with layout;
+        
+        private
         def bind_template_to_layout(layout_file)
             yield
 
