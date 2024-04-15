@@ -1,19 +1,28 @@
 require 'erb'
 
 module ERBR
-    def self.render(template_name, layout_name, *args)
-        template_file = File.read(template_name)
-        layout_file = File.read(layout_name)
-        @args = args
+    class << self
+        def render(template_name, layout_name, *args)
+            template_file = File.read(template_name)
+            layout_file = File.read(layout_name)
 
-        rendered_template = ERB.new(template_file).result(binding)
+            if template_file == nil
+                return "Error loading template file."
+            elsif layout_file == nil
+                return "Error loading layout file."
+            end
 
-       bind_template_to_layout(layout_file) { rendered_template }
-    end
+            @args = args
 
-    def self.bind_template_to_layout(layout_file)
-        yield
+            rendered_template = ERB.new(template_file).result(binding)
 
-        ERB.new(layout_file).result(binding)
+            bind_template_to_layout(layout_file) { rendered_template }
+        end
+
+        def bind_template_to_layout(layout_file)
+            yield
+
+            ERB.new(layout_file).result(binding)
+        end
     end
 end
