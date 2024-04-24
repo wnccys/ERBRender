@@ -14,21 +14,17 @@ module ERBR
 
         def render(template_name, layout_name, *args)
             template_file = File.read(template_name)
-            layout_file = File.read(layout_name)
+           
+            args.length > 0 ? @args = args : args = nil
 
-            if template_file == nil
-                return "Error loading template file."
-            elsif layout_file == nil
-                return "Error loading layout file."
+            if layout_name 
+                layout_file = File.read(layout_name) 
+
+                rendered_template = ERB.new(template_file).result(binding)
+                bind_template_to_layout(layout_file) { rendered_template }
+            else
+                ERB.new(template_file).result(binding)
             end
-
-            @args = args
-
-            rendered_template = ERB.new(template_file).result(binding)
-
-            bind_template_to_layout(layout_file) { rendered_template }
-
-            return "Successfully binded."
         end
 
         # Bounds template with layout;
