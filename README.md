@@ -11,6 +11,7 @@ Gemfile:
 gem "erbr", '~> 0.0.1'
 ```
 <br>
+
 ## Usage
 ERBR works with a template and optional layout or arguments:
 <br>
@@ -26,6 +27,7 @@ If layout is omitted, template is rendered with passed parameters;
 </div>
 
 ## Testing
-simple as run ```rspec``` at root folder
+simple as run ```rspec``` at root folder to run behavior driven tests;
 <br>
+
 ## License
