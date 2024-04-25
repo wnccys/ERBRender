@@ -1,6 +1,6 @@
 # <div align="center"> erbr </div>
 erbr makes the bound and rendering of a given template inside a given layout allowing parameters to be passed and used inside it;
-
+<br>
 ## Installation
 RubyGems:
 ```
@@ -10,6 +10,7 @@ Gemfile:
 ```sh
 gem "erbr", '~> 0.0.1'
 ```
+<br>
 ## Usage
 ERBR works with a template and optional layout or arguments:
 <br>
@@ -19,8 +20,12 @@ ERBR works with a template and optional layout or arguments:
 
 If layout is omitted, template is rendered with passed parameters;
 <br>
-### Example
 
 <div align="center">
     <img src="assets/erbr.gif" alt="erbr-example">
 </div>
+
+## Testing
+simple as run ```rspec``` at root folder
+<br>
+## License
