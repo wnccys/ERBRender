@@ -14,7 +14,7 @@ gem "erbr", '~> 0.0.1'
 ## Usage
 ERBR works with a template and optional layout or arguments:
 <br>
-<div>
+<div align="center">
     <img src="assets/erbr.png" alt="erbr-usage">
     <img src="assets/erbr.gif" alt="erbr-example">
 </div>
