@@ -10,7 +10,8 @@ module ERBR
         #
         # Arguments: 
         #   args: (Any) holds flexible data type to make variables available for erb placeholders;
-        #   args["name"] => "Fushiguro Toji": this way views can see @args["name"] making the value available for view throught @args;  
+        # args["name"] => "Fushiguro Toji": this way views can see @args["name"] making the value available for view throught @args;  
+        # so ERBR.render(any, any, :suguru => "geto") is available throught @args[0]["suguru"];
 
         def render(template_name, layout_name, *args)
             template_file = File.read(template_name)
