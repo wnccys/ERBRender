@@ -11,14 +11,16 @@ Gemfile:
 gem "erbr", '~> 0.0.1'
 ```
 ## Usage
-ERBR works binding templates to layout in a fast and easy way using arguments:
+ERBR works with a template and optional layout or arguments:
 
 <div align="center">
-    <img src="assets/erbr.png" width="400" height="400" alt="css-in-readme">
+    <img src="assets/erbr.png" alt="erbr-usage">
 </div>
+
+If layout is omitted, template is rendered with passed parameters;
 
 ### Example
 
 <div align="center">
-    <img src="assets/erbr.gif" width="400" height="400" alt="css-in-readme">
+    <img src="assets/erbr.gif" alt="erbr-example">
 </div>
