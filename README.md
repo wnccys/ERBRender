@@ -17,7 +17,7 @@ ERBR works with a template and optional layout or arguments:
 <div>
     <img src="assets/erbr.png" alt="erbr-usage">
 </div>
-
+<br>
 If layout is omitted, template is rendered with passed parameters;
 <br>
 
