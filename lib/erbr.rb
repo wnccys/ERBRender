@@ -38,6 +38,3 @@ module ERBR
         end
     end
 end
-
-print "\n"
-print ERBR.render(__dir__ + "/template.html.erb", __dir__ + "/layout.html.erb", :poke => "charmander")
