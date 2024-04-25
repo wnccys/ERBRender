@@ -19,9 +19,7 @@ ERBR works with a template and optional layout or arguments:
 </div>
 <br>
 
-<div align="center">
-    If layout is omitted, template is rendered with passed parameters;
-    <br>
+<div>
     <img src="assets/erbr.gif" alt="erbr-example">
 </div>
 
