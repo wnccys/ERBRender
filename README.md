@@ -1,5 +1,5 @@
 # <div align="center"> erbr </div>
-erbr makes the bound and rendering of a given template inside a given layout allowing parameters to be passed and used inside it;
+erbr makes the bound and rendering of a given template inside a given layout allowing parameters to be passed and used inside it.
 
 ## Installation
 RubyGems:
@@ -20,7 +20,7 @@ ERBR works with a template and optional layout or arguments:
 </div>
 
 ## Testing
-simple as run ```rspec spec/rspec_test_erbr.rb``` at root folder to run behavior driven tests;
+simple as run ```rspec spec/rspec_test_erbr.rb``` at root folder to run behavior driven tests.
 <br>
 
 ## License
