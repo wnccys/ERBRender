@@ -12,13 +12,13 @@ gem "erbr", '~> 0.0.1'
 ```
 ## Usage
 ERBR works with a template and optional layout or arguments:
-
+<br>
 <div align="center">
     <img src="assets/erbr.png" alt="erbr-usage">
 </div>
 
 If layout is omitted, template is rendered with passed parameters;
-
+<br>
 ### Example
 
 <div align="center">
