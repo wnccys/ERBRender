@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module ERBR - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search (/) for a class, method, ..." spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-render">::render</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-ERBR">
+  <h1 id="module-ERBR" class="module">
+    module ERBR
+  </h1>
+
+  <section class="description">
+    
+<p>Main gem class;</p>
+
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-render" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">render</span><span
+              class="method-args">(template_name, layout_name, *args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Renders template;</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; render(&quot;template.html.erb&quot;, &quot;layout.html.erb&quot;, args)</pre>
+
+<p>Arguments:</p>
+
+<pre>args: (Any) holds flexible data type to make variables available for erb placeholders;</pre>
+
+<p><a href="&quot;name&quot;">args</a> =&gt; “Fushiguro Toji”: this way views can see @<a href="&quot;name&quot;">args</a> making the value available for view throught @args;</p>
+
+<p>so <a href="ERBR.html#method-c-render"><code>ERBR.render</code></a>(any, any, :suguru =&gt; “geto”) is available throught @<a href="0">args</a>[“suguru”];</p>
+
+          <div class="method-source-code" id="render-source">
+            <pre><span class="ruby-comment"># File lib/erbr.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">render</span>(<span class="ruby-identifier">template_name</span>, <span class="ruby-identifier">layout_name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+    <span class="ruby-identifier">template_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">template_name</span>)
+   
+    <span class="ruby-identifier">args</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@args</span> = <span class="ruby-identifier">args</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">args</span> = <span class="ruby-keyword">nil</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">layout_name</span> 
+        <span class="ruby-identifier">layout_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">layout_name</span>) 
+
+        <span class="ruby-identifier">rendered_template</span> = <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">template_file</span>).<span class="ruby-identifier">result</span>(<span class="ruby-identifier">binding</span>)
+        <span class="ruby-identifier">bind_template_to_layout</span>(<span class="ruby-identifier">layout_file</span>) { <span class="ruby-identifier">rendered_template</span> }
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">template_file</span>).<span class="ruby-identifier">result</span>(<span class="ruby-identifier">binding</span>)
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.6.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
