@@ -18,9 +18,6 @@ ERBR works with a template and optional layout or arguments:
     <img src="assets/erbr.png" alt="erbr-usage">
     <img src="assets/erbr.gif" alt="erbr-example">
 </div>
-<div>
-    <img src="assets/erbr.gif" alt="erbr-example">
-</div>
 
 ## Testing
 simple as run ```rspec spec/rspec_test_erbr.rb``` at root folder to run behavior driven tests;
