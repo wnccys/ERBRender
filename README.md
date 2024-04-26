@@ -6,7 +6,6 @@ RubyGems:
 ```
 gem install erbr
 ```
-or
 <br>
 Gemfile: 
 ```sh
