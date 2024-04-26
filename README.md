@@ -26,7 +26,7 @@ ERBR.render("template.html.erb", "layout.html.erb", :msg => "Binded Argument!")
 </div>
 
 ## Testing
-simple as run ```rspec spec/rspec_test_erbr.rb``` at root folder to run behavior driven tests.
+simple as run ```rspec spec/rspec_test_erbr.rb``` to run behavior driven tests.
 <br>
 
 ## License
