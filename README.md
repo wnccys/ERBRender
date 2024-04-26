@@ -6,6 +6,7 @@ RubyGems:
 ```
 gem install erbr
 ```
+or
 Gemfile: 
 ```sh
 gem "erbr", '~> 0.0.1'
