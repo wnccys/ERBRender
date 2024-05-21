@@ -32,7 +32,7 @@ JSON files:
     }
 }
 
-ERBR.render(__dir__ + "/../lib/example.json.erb", nil, @post)
+ERBR.render(example.json.erb", nil, @post)
 
 
 # => {
