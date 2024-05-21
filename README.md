@@ -6,6 +6,7 @@ RubyGems:
 ```
 gem install erbr
 ```
+
 Gemfile: 
 ```sh
 gem "erbr", '~> 0.0.1'
@@ -19,14 +20,14 @@ ERBR.render("template.html.erb", "layout.html.erb", :msg => "Binded Argument!")
 
 # => <title>Layout Title</title>
 # => <p>Template Content Binded With Layout</p>
-# => <p>Binded Argument!</p>
+# => <span>Binded Argument!</span>
 ```
 <div align="center">
 
 </div>
 
 ## Testing
-simple as run ```rspec spec/rspec_test_erbr.rb``` at root folder to run behavior driven tests.
+simple as run ```rspec spec/rspec_test_erbr.rb``` to run behavior driven tests.
 <br>
 
 ## License
