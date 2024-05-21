@@ -15,7 +15,7 @@ gem "erbr", '~> 0.0.1'
 ## Usage
 ERBR works with a template and optional layout or arguments:
 <br>
-```
+```html
 ERBR.render("template.html.erb", "layout.html.erb", :msg => "Binded Argument!")
 
 # => <title>Layout Title</title>
