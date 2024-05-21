@@ -23,7 +23,7 @@ ERBR.render("template.html.erb", "layout.html.erb", :msg => "Binded Argument!")
 # => <span>Binded Argument!</span>
 ```
 JSON files:
-```erb
+```ruby
 @post = {
     :method => "POST",
     :url => "https://localhost:3000",
