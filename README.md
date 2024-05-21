@@ -1,5 +1,5 @@
 # <div align="center"> erbr </div>
-erbr makes the bound and rendering of a given template inside a given layout allowing parameters to be passed and used inside It dinamically. As it uses a generic class algorithm (erb) can be used in *all* plain text format files such as JSON, JavaScript, TypeScript, HTML, CSS, YAML, Markdown, SQL etc.
+erbr makes the bound and rendering of a given template inside a given layout allowing parameters to be passed and used inside It dinamically. As it uses a generic class algorithm (erb) can be used in *all* plain text format files such as JSON, JavaScript, TypeScript, HTML, CSS, YAML, Markdown, SQL among others.
 
 ## Installation
 RubyGems:
