@@ -1,5 +1,5 @@
 # <div align="center"> erbr </div>
-erbr makes the bound and rendering of a given template inside a given layout allowing parameters to be passed and used inside it.
+erbr makes the bound and rendering of a given template inside a given layout allowing parameters to be passed and used inside it dinamically and can be use in *all* plain text format such as JSON, JavaScript, TypeScript, HTML, CSS, YAML, Markdown, XML, SQL etc.
 
 ## Installation
 RubyGems:
@@ -27,7 +27,8 @@ ERBR.render("template.html.erb", "layout.html.erb", :msg => "Binded Argument!")
 </div>
 
 ## Testing
-simple as run ```rspec spec/rspec_test_erbr.rb``` to run behavior driven tests.
+simple as run ```rspec spec/rspec_test_erbr.rb``` to run all behavior driven tests or
+```rspec spec/{name}.{format}.erb``` to run available specific examples tests.
 <br>
 
 ## License
