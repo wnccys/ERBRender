@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
     spec.name        = "erbr"
-    spec.version     = "0.0.1"
+    spec.version     = "0.0.2"
     spec.authors     = ["wnccys"]
     
     spec.summary     = %q{ ERB template render }
