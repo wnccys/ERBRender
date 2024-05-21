@@ -48,7 +48,7 @@ ERBR.render("example.json.erb", nil, @post)
 </div>
 
 ## Testing
-simple as run ```rspec spec/rspec_test_erbr.rb``` to run all behavior driven tests or
+Simple as run ```rspec spec/rspec_test_erbr.rb``` to run all behavior driven tests or
 ```rspec spec/{name}.{format}.erb``` to run available specific examples tests.
 <br>
 
