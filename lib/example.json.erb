@@ -1,0 +1,13 @@
+<%# Argument unwrap featuring custom comments %>
+<% @post = args[0] %>
+{
+  "method": <%= @post[:method] %>,
+  "url": "<%= @post[:url] %>",
+  "headers": {
+    "Host": "<%= @post[:headers][:user_agent] %>",
+    "<%= @post[:headers][:content_type] %>": "application/json"
+  },
+  "body": {
+    "key": "<%= @post[:body][:key] %>"
+  }
+}
