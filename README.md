@@ -22,6 +22,27 @@ ERBR.render("template.html.erb", "layout.html.erb", :msg => "Binded Argument!")
 # => <p>Template Content Binded With Layout</p>
 # => <span>Binded Argument!</span>
 ```
+JSON files:
+```
+@post = {
+    :method => "POST",
+    :url => "https://localhost:3000",
+    :body => {
+        :key => "value"
+    }
+}
+
+ERBR.render(__dir__ + "/../lib/example.json.erb", nil, @post)
+
+
+# => {
+# =>   "method": POST,
+# =>   "url": "https://localhost:3000",
+# =>   "body": {
+# =>     "key": "value"
+# =>   }
+# => }
+```
 <div align="center">
 
 </div>
