@@ -32,7 +32,7 @@ JSON files:
     }
 }
 
-ERBR.render(example.json.erb", nil, @post)
+ERBR.render("example.json.erb", nil, @post)
 
 
 # => {
