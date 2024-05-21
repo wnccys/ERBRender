@@ -9,7 +9,7 @@ gem install erbr
 
 Gemfile: 
 ```sh
-gem "erbr", '~> 0.0.1'
+gem "erbr", '~> 0.0.2'
 ```
 
 ## Usage
