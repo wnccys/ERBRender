@@ -34,7 +34,6 @@ JSON files:
 
 ERBR.render("example.json.erb", nil, @post)
 
-
 # => {
 # =>   "method": POST,
 # =>   "url": "https://localhost:3000",
